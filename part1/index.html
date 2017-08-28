@@ -159,8 +159,7 @@
   Lähdekoodi koostuu lauseista (statement) ja lausekkeista (expression), joita Java-kielessä voidaan lukea rivi riviltä ylhäältä alaspäin ja vasemmalta oikealle. Esimerkiksi tekstin "Hei maailma" tulostuksessa käytetään Java-ohjelmointikielellä lausetta:
 </p>
 
-<pre class="sh_java code-highlight"><code>  System.out.println("Hei maailma");
-</code></pre>
+<pre class="sh_java code-highlight"><code>System.out.println("Hei maailma");</code></pre>
 
 <p>
   Lause <code>System.out.println</code> on Java-ohjelmointikielen valmiiksi tarjoama komento, jota käytetään merkkijonon tulostamiseen. Komento käytännössä käskee tietokonetta tulostamaan sille sulkeiden sisällä hipsuissa annetun merkkijonon. Komennon pääte <code>ln</code> on lyhenne sanasta <em>line</em>, eli komentoa käyttämällä merkkijonon jälkeen tulostetaan myös rivinvaihto.
@@ -186,8 +185,7 @@
         System.out.println("Tulostettava teksti");
 
     }
-}
-</code></pre>
+}</code></pre>
 
 <p>
   Kokeile ohjelmarungon kirjoittamista itse alla olevaan tekstikenttään.
@@ -241,15 +239,13 @@
         // Kirjoita ohjelmasi tähän alle
 
     }
-}
-</code></pre>
+}</code></pre>
 
   <p>
     Rivi "// Kirjoita ohjelmasi tähän alle" on <em>kommenttirivi</em>, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Lisää kommenttirivin alle lause, joka tulostaa merkkijonon "Ada Lovelace" ja suorita ohjelma. Ohjelman tulostuksen tulee olla seuraavanlainen:
   </p>
 
-<pre class="sample-output">    Ada Lovelace
-</pre>
+<pre class="sample-output">Ada Lovelace</pre>
 
   <p>
     Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijonon, palauta tehtävä TMC:lle. Tutustu tämän jälkeen halutessasi lisää <a href="https://en.wikipedia.org/wiki/Ada_Lovelace" target="_blank">Ada Lovelaceen</a>, joka oli yksi ensimmäisistä ohjelmoijista.
@@ -330,8 +326,7 @@
 
         // System.out.println("Muuta tulostettavaa");
     }
-}
-</code></pre>
+}</code></pre>
 
 <p>
   Esimerkin alin rivi esittelee erityisen kätevän käyttökohteen kommenteille. Kirjoitettua lähdekoodia ei tarvitse poistaa jos haluaa tilapäisesti kokeilla jotain.
@@ -355,8 +350,7 @@
   </p>
 
 <pre class="sample-output">Hei Maailma!
-(Ja Mualima!)
-</pre>
+(Ja Mualima!)</pre>
 
 
     </div>
@@ -387,8 +381,7 @@
   Tulostettavan tekstin osana voi olla myös erikoismerkkejä, joista tärkein on rivinvaihto. Rivinvaihto ilmaistaan kenoviivalla ja n-merkillä seuraavasti: <code>\n</code>. Erikoismerkkejä on <a href="http://en.wikipedia.org/wiki/Escape_character" title="Escape character - Wikipedia, the free encyclopedia" target="_blank">muitakin</a>.
 </p>
 
-<pre class="sh_java code-highlight"><code>System.out.println("Ensimmäinen\nToinen\nKolmas");
-</code></pre>
+<pre class="sh_java code-highlight"><code>System.out.println("Ensimmäinen\nToinen\nKolmas");</code></pre>
 
 <p>
   Ylläoleva lause tulostaa seuraavaa:
@@ -396,8 +389,7 @@
 
 <pre class="sample-output">Ensimmäinen
 Toinen
-Kolmas
-</pre>
+Kolmas</pre>
 
 
 
@@ -419,11 +411,9 @@ Kolmas
   Puolipisteellä <code>;</code> erotetaan lauseet toisistaan. Voisimme oikeastaan kirjoittaa koko ohjelman yhdelle riville -- mikä ei kuitenkaan ole kovin ymmärrettävää.
 </p>
 
-<pre class="sh_java code-highlight"><code>  System.out.print("Hei "); System.out.print("maailma"); System.out.print("!\n");
-</code></pre>
+<pre class="sh_java code-highlight"><code>System.out.print("Hei "); System.out.print("maailma"); System.out.print("!\n");</code></pre>
 
-<pre class="sample-output">  Hei maailma!
-</pre>
+<pre class="sample-output">Hei maailma!</pre>
 
 <p>
   Vaikka ylläoleva esimerkki toimii, on rivinvaihtojen käyttö tärkeää muita ohjelmoijia ajatellen. Tällöin ohjelman lukija tietää, että kullakin rivillä tehdään vain yksi konkreettinen asia.
@@ -446,21 +436,19 @@ Kolmas
         System.out.println("public static -- neljän merkin sisennys.");
         System.out.println("public static ... sisällä -- kahdeksan merkin sisennys -- tai enemmän.");
     }
-}
-</code></pre>
+}</code></pre>
 
 
 <p>
   Tämä koodi taas ei ole kovin ymmärrettävää.
 </p>
 
-<pre class="sh_java code-highlight"><code>         public class Esimerkki {
+<pre class="sh_java code-highlight"><code>public class Esimerkki {
 public static void main(String[] args) {
       System.out.println("Heippa vaan! Tämä koodi on siististi sisennetty.");
  System.out.println("public class -- ei sisennystä.");
                    System.out.println("public static -- neljän merkin sisennys.");
-           System.out.println("public static ... sisällä -- kahdeksan merkin sisennys -- tai enemmän.");}}
-</code></pre>
+           System.out.println("public static ... sisällä -- kahdeksan merkin sisennys -- tai enemmän.");}}</code></pre>
 
 <p>
   Kurssilla käytettävä Test My Code -ympäristö sisältää Checkstyle-nimisen työvälineen. Checkstyle-työvälinettä voi käyttää mm. koodin sisennyksen ja muiden tyyliseikkojen automaattiseen tarkastamiseen. Tällä kurssilla Checkstyleä käytetään tyylin tarkastamiseen.
@@ -509,13 +497,12 @@ public static void main(String[] args) {
     Tee ohjelma, jonka tulostus on seuraava:
   </p>
 
-<pre class="sample-output">    *
+<pre class="sample-output">*
    ***
   *****
  *******
 *********
-    *
-</pre>
+    *</pre>
 
 
     </div>
@@ -573,8 +560,7 @@ public static void main(String[] args) {
   Muuttuja esitellään -- eli luodaan -- kertomalla ensin tiedon tyyppi, jota seuraa muuttujalle annettava nimi. Muuttujaan asetetaan arvo yhdellä yhtäsuuruusmerkillä (<code>=</code>). 
 </p>
 
-<pre class="sh_java code-highlight"><code>int kuukausia = 12;
-</code></pre>
+<pre class="sh_java code-highlight"><code>int kuukausia = 12;</code></pre>
 
 <p>
   Yllä olevassa lauseessa luodaan kokonaisluku-tyyppinen muuttuja <em>(int)</em>, jolle annetaan nimeksi <em>kuukausia</em>. Muuttujaan kuukausia asetetaan arvo 12.  Lause luetaan "muuttuja <em>kuukausia</em> saa <em>arvon</em> 12".
@@ -592,16 +578,14 @@ public static void main(String[] args) {
         System.out.println("Elämän tarkoitus: " + elamanTarkoitus);
         System.out.println("Piin arvo on: " + pii);
     }
-}
-</code></pre>
+}</code></pre>
 
 <p>
   Tulostus:
 </p>
 
 <pre class="sample-output">Kokonaislukumuuttuja: 123
-Liukulukumuuttuja: 3.141592653
-</pre>
+Liukulukumuuttuja: 3.141592653</pre>
 
 <div class="hint">
   <div class="hint__header">
@@ -639,33 +623,31 @@ Liukulukumuuttuja: 3.141592653
       
   <p>Tehtäväpohja sisältää ohjelman, joka tulostaa seuraavaa.</p>
 
-<pre class="sample-output">    Kanoja:
-    3
-    Pekonia (kg):
-    5.5
-    Traktori:
-    Ei ole!
+<pre class="sample-output">Kanoja:
+3
+Pekonia (kg):
+5.5
+Traktori:
+Ei ole!
 
-    Tässä vielä tiivistelmä:
-    3
-    5.5
-    Ei ole!
-</pre>
+Tässä vielä tiivistelmä:
+3
+5.5
+Ei ole!</pre>
 
   <p>Muuta ohjelmaa annetuista kohdista niin että tuloste on:</p>
 
-<pre class="sample-output">    Kanoja:
-    9000
-    Pekonia (kg):
-    0.1
-    Traktori:
-    Zetor
+<pre class="sample-output">Kanoja:
+9000
+Pekonia (kg):
+0.1
+Traktori:
+Zetor
 
-    Tässä vielä tiivistelmä:
-    9000
-    0.1
-    Zetor
-</pre>
+Tässä vielä tiivistelmä:
+9000
+0.1
+Zetor</pre>
 
 
     </div>
@@ -684,8 +666,7 @@ Liukulukumuuttuja: 3.141592653
 
         System.out.println("Piin arvo on: " + pii);
     }
-}
-</code></pre>
+}</code></pre>
 
 
 <h2 class="material-heading">
@@ -701,16 +682,14 @@ Liukulukumuuttuja: 3.141592653
 System.out.println("Muuttujan arvo on " + luku);
 
 luku = 42;
-System.out.println("Muuttujan arvo on " + luku);
-</code></pre>
+System.out.println("Muuttujan arvo on " + luku);</code></pre>
 
 <p>
   Tulostus:
 </p>
 
 <pre class="sample-output">Muuttujan arvo on 123
-Muuttujan arvo on 42
-</pre>
+Muuttujan arvo on 42</pre>
 
 
 <p>
@@ -776,8 +755,7 @@ Muuttujan arvo on 42
 onnistuukoKokonaisLuvunAsetus = 42; // Ei onnistu
 
 int luku = 10;
-onnistuukoKokonaisLuvunAsetus = luku; // Ei myöskään onnistu
-</code></pre>
+onnistuukoKokonaisLuvunAsetus = luku; // Ei myöskään onnistu</code></pre>
 
 <p>
   Poikkeus kuitenkin löytyy: liukulukutyyppiseen muuttujaan voi asettaa kokonaisluvun, sillä Java osaa muuttaa kokonaisluvun liukuluvuksi asetuksen yhteydessä.
@@ -787,8 +765,7 @@ onnistuukoKokonaisLuvunAsetus = luku; // Ei myöskään onnistu
 liukuluku = 1; // Onnistuu
 
 int luku = 10;
-liukuluku = luku; // Onnistuu myös
-</code></pre>
+liukuluku = luku; // Onnistuu myös</code></pre>
 
 <p>
   Liukulukua ei kuitenkaan voi asettaa kokonaislukuun. Tämä johtuu siitä, että ohjelmointikielen suunnittelijat yrittävät suojella ohjelmoijaa tietoa kadottavilta ohjelmointivirheiltä.
@@ -797,8 +774,7 @@ liukuluku = luku; // Onnistuu myös
 <pre class="sh_java code-highlight"><code>int luku = 4.2; // Ei onnistu
 
 double liukuluku = 0.42;
-luku = liukuluku; // Ei myöskään onnistu
-</code></pre>
+luku = liukuluku; // Ei myöskään onnistu</code></pre>
 
 
 
@@ -815,22 +791,18 @@ luku = liukuluku; // Ei myöskään onnistu
 double b = 22.0;
 double c = a * b * b;
 
-System.out.println();
-</code></pre>
+System.out.println();</code></pre>
 
-<pre class="sample-output">1519.76
-</pre>
+<pre class="sample-output">1519.76</pre>
 
 
 <pre class="sh_java code-highlight"><code>double pii = 3.14;
 double sade = 22.0;
 double pintaAla = pii * sade * sade;
 
-System.out.println(pintaAla);
-</code></pre>
+System.out.println(pintaAla);</code></pre>
 
-<pre class="sample-output">  1519.76
-</pre>
+<pre class="sample-output">1519.76</pre>
 
 <p>
   Edellä olevat kaksi esimerkkiä sisältävät täsmälleen saman toiminnallisuuden ja tuottavat saman tulostuksen. Toinen esimerkeistä on kuitenkin paljon ymmärrettävämpi. Kyseessä on ympyrän pinta-alan laskevan ohjelman koodi. Ensimmäisellä rivillä määritellään piin arvo, toisella rivillä ympyrän säde, ja kolmannella rivillä lasketaan pinta-ala. Tämän jälkeen pinta-ala tulostetaan.
@@ -870,24 +842,21 @@ System.out.println(pintaAla);
   Muuttujan nimessä ei saa olla tiettyjä erikoismerkkejä, kuten huutomerkkejä (!). Välilyönti ei ole sallittu, sillä se erottaa komentojen osat toisistaan. Välilyönti kannattaa korvata <a href="http://fi.wikipedia.org/wiki/CamelCase" title="CamelCase – Wikipedia">camelCase</a><-tyylillä, jolloin nimi <code>muistuttaneeKamelia</code>. <strong>Huom!</strong> Muuttujien nimien ensimmäinen kirjain kirjoitetaan aina pienellä:
 </p>
 
-<pre class="sh_java code-highlight"><code>int camelCaseMuuttuja = 7;
-</code></pre>
+<pre class="sh_java code-highlight"><code>int camelCaseMuuttuja = 7;</code></pre>
 
 <p>
 Numeroita voidaan käyttää muuttujan nimessä, kunhan nimi ei ala numerolla.  Nimi ei myöskään voi koostua pelkistä numeroista.
 </p>
 
 <pre class="sh_java code-highlight"><code>int 7muuttuja = 4; // Ei sallittu!
-int muuttuja7 = 4; // Sallittu, mutta ei kuvaava muuttujan nimi
-</code></pre>
+int muuttuja7 = 4; // Sallittu, mutta ei kuvaava muuttujan nimi</code></pre>
 
 <p>
   Muuttujan nimi ei saa olla jo entuudestaan käytössä. Tälläisiä nimiä ovat mm. aikaisemmin määritellyt muuttujat ja Javan valmiit komennot, kuten <code>System.out.print</code> ja <code>System.out.println</code>.
 </p>
 
 <pre class="sh_java code-highlight"><code>int camelCase = 2;
-int camelCase = 5; // Ei sallittu -- muuttuja camelCase on jo käytössä!
-</code></pre>
+int camelCase = 5; // Ei sallittu -- muuttuja camelCase on jo käytössä!</code></pre>
 
 <p>
   Muuttujien nimissä ei tule myöskään käyttää ääkkösiä. Voit korvata ääkköset aakkosilla, eli muuta ä -> a ja ö -> o.
@@ -953,8 +922,7 @@ int toka = 4;
 System.out.println(toka); // tulostaa 4
 
 int summa = eka + toka; // muuttujaan summa asetetaan muuttujien eka ja toka arvojen summa
-System.out.println(summa); // tulostaa 6
-</code></pre>
+System.out.println(summa); // tulostaa 6</code></pre>
 
 
 <h2 class="material-heading">
@@ -970,8 +938,7 @@ System.out.println(summa); // tulostaa 6
 System.out.println(laskuSuluilla); // tulostaa 23
 
 int laskuSuluitta = 1 + 1 + 3 * 2 + 5;
-System.out.println(laskuSuluitta); // tulostaa 13
-</code></pre>
+System.out.println(laskuSuluitta); // tulostaa 13</code></pre>
 
 
 <p>
@@ -986,8 +953,7 @@ System.out.println(laskuSuluilla); // tulostaa 23
 int laskuSuluitta = 1 + 1;
 laskuSuluitta = laskuSuluitta + 3 * 2;
 laskuSuluitta = laskuSuluitta + 5;
-System.out.println(laskuSuluitta); // tulostaa 13
-</code></pre>
+System.out.println(laskuSuluitta); // tulostaa 13</code></pre>
 
 
 <div class="exercise">
@@ -1011,8 +977,7 @@ System.out.println(laskuSuluitta); // tulostaa 13
     Ohjelman tulostus on seuraava:
   </p>
 
-<pre class="sample-output">Vuodessa on X sekuntia.
-</pre>
+<pre class="sample-output">Vuodessa on X sekuntia.</pre>
 
   <p>
     X:n kohdalle tulee ohjelmasi laskema tulos. Huom! Hyödynnä tässä tehtävässä muuttujia.
@@ -1028,12 +993,11 @@ System.out.println(laskuSuluitta); // tulostaa 13
   TODO: quiz?
 </p>
 
-<pre class="sh_java code-highlight"><code>  int eka = 10;
-  int toka = eka + 5;
-  eka = 20;
+<pre class="sh_java code-highlight"><code>int eka = 10;
+int toka = eka + 5;
+eka = 20;
 
-  System.out.println(toka); // tulostaa 15
-</code></pre>
+System.out.println(toka); // tulostaa 15</code></pre>
 
 
 <div class="hint">
@@ -1047,8 +1011,7 @@ System.out.println(laskuSuluitta); // tulostaa 13
     Lauseke (expression) on arvojen yhdistelmä, joka muuntuu arvoksi laskuoperaation tai evaluaation yhteydessä. Alla oleva lause sisältää lausekkeen <code>1 + 1 + 3 * 2 + 5</code>, joka evaluoidaan ennen arvon asetusta muuttujaan.
   </p>
 
-<pre class="sh_java code-highlight"><code>int laskuSuluitta = 1 + 1 + 3 * 2 + 5;
-</code></pre>
+<pre class="sh_java code-highlight"><code>int laskuSuluitta = 1 + 1 + 3 * 2 + 5;</code></pre>
 
   <p>
     Lausekkeen evaluaatio tapahtuu aina ennen muuttujan arvon asetusta, eli yllä lasku "1 + 1 + 3 * 2 + 5" suoritetaan ennen tuloksen asetusta muuttujaan.
@@ -1067,8 +1030,7 @@ System.out.println(laskuSuluitta); // tulostaa 13
 int toka = 4;
 
 System.out.println(eka + toka); // tulostaa 6
-System.out.println(2 + toka - eka - toka); // tulostaa 0
-</code></pre>
+System.out.println(2 + toka - eka - toka); // tulostaa 0</code></pre>
 
 
 <p>
@@ -1081,8 +1043,7 @@ int toka = 4;
 // alla oleva lauseke ei edes toimi, sillä lauseketta
 // ei aseteta minkään muuttujan arvoksi tai anneta parametrina
 // tulostuslauseelle
-eka + toka;
-</code></pre>
+eka + toka;</code></pre>
 
 
 <div class="quiznator-plugin" data-quiz-id="5878a0b579db890004df0d1d"></div>
@@ -1099,19 +1060,15 @@ eka + toka;
 </p>
 
 <pre class="sh_java code-highlight"><code>int pituus = 42;
-System.out.println("Pituus " + pituus);
-</code></pre>
+System.out.println("Pituus " + pituus);</code></pre>
 
-<pre class="sample-output">Pituus 42
-</pre>
+<pre class="sample-output">Pituus 42</pre>
 
 <pre class="sh_java code-highlight"><code>System.out.println("tuossa on kokonaisluku --&gt; " + 2);
-System.out.println(2 + " &lt;-- tuossa on kokonaisluku");
-</code></pre>
+System.out.println(2 + " &lt;-- tuossa on kokonaisluku");</code></pre>
 
 <pre class="sample-output">tuossa on kokonaisluku --&gt; 2
-2 &lt;-- tuossa on kokonaisluku
-</pre>
+2 &lt;-- tuossa on kokonaisluku</pre>
 
 <p>
   Jos toinen operaation <code>+</code> kohteista on merkkijono, muutetaan myös toinen operaation kohteista merkkijonoksi ohjelman suorituksen yhteydessä. Alla olevassa esimerkissä kokonaisluku <code>2</code> on muutettu merkkijonoksi "2", ja siihen on yhdistetty merkkijono.
@@ -1122,12 +1079,10 @@ System.out.println(2 + " &lt;-- tuossa on kokonaisluku");
 </p>
 
 <pre class="sh_java code-highlight"><code>System.out.println("Neljä: " + (2 + 2));
-System.out.println("Mutta! kaksikymmentäkaksi: " + 2 + 2);
-</code></pre>
+System.out.println("Mutta! kaksikymmentäkaksi: " + 2 + 2);</code></pre>
 
 <pre class="sample-output">Neljä: 4
-Mutta! kaksikymmentäkaksi: 22
-</pre>
+Mutta! kaksikymmentäkaksi: 22</pre>
 
 <div class="code-states-visualizer-widget" data-input='{"code":"public class Esimerkki {\n    public static void main(String[] args) {\n        System.out.println(\"Neljä: \" + (2 + 2));\n        System.out.println(\"Mutta! kaksikymmentäkaksi: \" + 2 + 2);\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\n","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"5","frame_id":5}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\nMutta! kaksikymmentäkaksi: 22\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\nMutta! kaksikymmentäkaksi: 22\n","event":"return","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"__return__":["VOID"]},"ordered_varnames":["__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></div>
 
@@ -1143,16 +1098,14 @@ System.out.println("muuttujan x arvo on: " + x);
 int y = 5;
 int z = 6;
 
-System.out.println("y on " + y + " ja z on " + z);
-</code></pre>
+System.out.println("y on " + y + " ja z on " + z);</code></pre>
 
 <p>
   Tulostus:
 </p>
 
 <pre class="sample-output">muuttujan x arvo on: 10
-y on 5 ja z on 6
-</pre>
+y on 5 ja z on 6</pre>
 
 
 
@@ -1177,15 +1130,13 @@ y on 5 ja z on 6
     Esimerkiksi jos muuttujissa on luvut 5 ja 4, ohjelman tulostus on seuraava:
   </p>
 
-<pre class="sample-output">5 + 4 = 9
-</pre>
+<pre class="sample-output">5 + 4 = 9</pre>
 
   <p>
     Jos taas muuttujissa on luvut 73457 ja 12888, ohjelman tulostus on seuraava:
   </p>
 
-<pre class="sample-output">73457 + 12888 = 86345
-</pre>
+<pre class="sample-output">73457 + 12888 = 86345</pre>
 
 
     </div>
@@ -1215,15 +1166,13 @@ y on 5 ja z on 6
     Esimerkiksi jos muuttujissa on luvut 2 ja 8, ohjelman tulostus on seuraava:
   </p>
 
-<pre class="sample-output">2 * 8 = 16
-</pre>
+<pre class="sample-output">2 * 8 = 16</pre>
 
   <p>
     Jos taas muuttujissa on luvut 277 ja 111, ohjelman tulostus on seuraava:
   </p>
 
-<pre class="sample-output">277 * 111 = 30747
-</pre>
+<pre class="sample-output">277 * 111 = 30747</pre>
 
   <p>
     Kokeile myös kuinka suuren kertolaskun ohjelmasi pystyy laskemaan!
@@ -1248,14 +1197,12 @@ y on 5 ja z on 6
 </p>
 
 <pre class="sh_java code-highlight"><code>int tulos = 3 / 2;
-System.out.println(tulos); // Huom! tulostaa 1 (kokonaisluku), sillä 3 ja 2 ovat myös kokonaislukuja
-</code></pre>
+System.out.println(tulos); // Huom! tulostaa 1 (kokonaisluku), sillä 3 ja 2 ovat myös kokonaislukuja</code></pre>
 
 <pre class="sh_java code-highlight"><code>int eka = 3:
 int toka = 2;
 double tulos = eka / toka;
-System.out.println(tulos); // nytkin tulostus on 1, sillä eka ja toka ovat kokonaislukuja
-</code></pre>
+System.out.println(tulos); // nytkin tulostus on 1, sillä eka ja toka ovat kokonaislukuja</code></pre>
 
 <p>
   Jos jakolaskun jakaja tai jaettava (tai molemmat!) ovat liukulukuja, tulee tulokseksi myös liukuluku.
@@ -1265,8 +1212,7 @@ System.out.println(tulos); // nytkin tulostus on 1, sillä eka ja toka ovat koko
 System.out.println(kunJaettavaOnLiukuluku); // tulostaa 1.5
 
 double kunJakajaOnLiukuluku = 3 / 2.0;
-System.out.println(kunJakajaOnLiukuluku); // tulostaa 1.5
-</code></pre>
+System.out.println(kunJakajaOnLiukuluku); // tulostaa 1.5</code></pre>
 
 <p>
   Kokonaisluku voidaan tarvittaessa muuttaa liukuluvuksi lisäämällä sen eteen tyyppimuunnosoperaatio <code>(double)</code>:
@@ -1282,8 +1228,7 @@ double tulos2 = eka / (double) toka;
 System.out.println(tulos2); // tulostaa 1.5
 
 double tulos3 = (double) (eka / toka);
-System.out.println(tulos3); // tulostaa 1
-</code></pre>
+System.out.println(tulos3); // tulostaa 1</code></pre>
 
 <p>
   Jälkimmäisessä esimerkissä tulos pyöristyy väärin sillä laskuoperaatio kokonaisluvuilla suoritetaan ennen tyyppimuunnosta.
@@ -1294,8 +1239,7 @@ System.out.println(tulos3); // tulostaa 1
 </p>
 
 <pre class="sh_java code-highlight"><code>// tulos automaattisesti kokonaisluku: 1
-int tulosKokonaislukuKoskaTyyppiKokonaisluku = 3.0 / 2;
-</code></pre>
+int tulosKokonaislukuKoskaTyyppiKokonaisluku = 3.0 / 2;</code></pre>
 
 <p>
   Seuraava esimerkki tulostaa "1.5", sillä jaettavasta tehdään liukuluku kertomalla se liukuluvulla (1.0 * 3 = 3.0) ennen jakolaskua.
@@ -1305,8 +1249,7 @@ int tulosKokonaislukuKoskaTyyppiKokonaisluku = 3.0 / 2;
 int jakaja = 2;
 
 double tulos = 1.0 * jaettava / jakaja;
-System.out.println(tulos);
-</code></pre>
+System.out.println(tulos);</code></pre>
 
 
 <div class="exercise">
@@ -1328,8 +1271,7 @@ System.out.println(tulos);
 
 <pre class="sample-output">eka: 9
 toka: 7
-kolmas: 6
-</pre>
+kolmas: 6</pre>
 
   <p>
     Muokkaa ohjelmaa siten, että ohjelma tulostaa myös muuttujien keskiarvon.
@@ -1338,8 +1280,7 @@ kolmas: 6
 <pre class="sample-output">eka: 9
 toka: 7
 kolmas: 6
-keskiarvo: 7.333333333333333
-</pre>
+keskiarvo: 7.333333333333333</pre>
 
   <p>
     Huom! Jos muuttujien arvoja muutetaan, tulee myös tulostuksen muuttua.
@@ -1348,8 +1289,7 @@ keskiarvo: 7.333333333333333
 <pre class="sample-output">eka: 5
 toka: 7
 kolmas: 4
-keskiarvo: 5.333333333333333
-</pre>
+keskiarvo: 5.333333333333333</pre>
 
 
 
@@ -1379,24 +1319,21 @@ keskiarvo: 5.333333333333333
       
   <p>Tehtäväpohjassa on ohjelma, jossa on kaksi muuttujaa. Ohjelman tulostus on tällä hetkellä seuraava.</p>
 
-<pre class="sample-output">5 + 3 = 8
-</pre>
+<pre class="sample-output">5 + 3 = 8</pre>
 
   <p>Muokkaa ohjelmaa siten, että ohjelma laskee myös lukujen erotuksen, tulon, ja jakolaskun.</p>
 
 <pre class="sample-output">5 + 3 = 8
 5 - 3 = 2
 5 * 3 = 15
-5 / 3 = 1.6666666666666667
-</pre>
+5 / 3 = 1.6666666666666667</pre>
 
   <p>Huom! Jos muuttujien arvoja muutetaan, tulee myös tulostuksen muuttua.</p>
 
 <pre class="sample-output">1 + 3 = 4
 1 - 3 = -2
 1 * 3 = 3
-1 / 3 = 0.3333333333333333
-</pre>
+1 / 3 = 0.3333333333333333</pre>
 
   <p>Tehtävässä ei ole testejä jotka kertovat onko tulostus oikein vai ei. Tarmista että ohjelmasi toimii oikein ennen tehtävän palautusta suorittamalla se useammalla muuttujien arvoilla.</p>
 
@@ -1442,8 +1379,7 @@ rivi 5:
 rivi 6: int kolmas = eka + toka;
 rivi 7: System.out.println(eka);
 rivi 8: System.out.println(toka);
-rivi 9: System.out.println(kolmas);
-</code></pre>
+rivi 9: System.out.println(kolmas);</code></pre>
 
 <p>
   Alla on kirjoitettu ylläolevan ohjelmakoodin suoritus auki.
@@ -1488,8 +1424,7 @@ rivi 8: tulostetaan arvo 23
 
 rivi 9: tulostetaan muuttuja kolmas
 rivi 9: kopioidaan muuttujan kolmas arvo tulostettavaksi, muuttujan kolmas arvo on 28
-rivi 9: tulostetaan arvo 28
-</pre>
+rivi 9: tulostetaan arvo 28</pre>
 
 
 <p>
@@ -1568,8 +1503,7 @@ public class Esimerkki {
 
         // ohjelmakoodi
     }
-}
-</code></pre>
+}</code></pre>
 
 <p>
   Älä hätäile vaikka pääohjelmarunko saattaa näyttää vaikeaselkoiselta! Jatkamme yhä ohjelmointia kommentilla <em>ohjelmakoodi</em> merkittyyn kohtaan.
@@ -1588,8 +1522,7 @@ public class Esimerkki {
 <pre class="sh_java code-highlight"><code>System.out.print("Anna kokonaisluku: ");
 int kokonaisluku = Integer.parseInt(lukija.nextLine());
 
-System.out.println("Annoit " + kokonaisluku);
-</code></pre>
+System.out.println("Annoit " + kokonaisluku);</code></pre>
 
 <p>
   Jatkossa esimerkkitulostuksissa merkitään punaisella käyttäjän syöttämät arvot. Edeltävän ohjelman suoritus olisi seuraavanlainen, olettaen, että käyttäjä syöttää arvon 25.
@@ -1597,8 +1530,7 @@ System.out.println("Annoit " + kokonaisluku);
 
 <pre class="sample-output">Anna kokonaisluku: <font color="red">25</font>
 
-Annoit 25
-</pre>
+Annoit 25</pre>
 
 <p>
   TODO: typonator, kirjoitetaan integer parseint -ohjelma.
@@ -1625,8 +1557,7 @@ Annoit 25
 
 <pre class="sample-output">Anna luku: <font color="red">42</font>
 
-Syötit: 42
-</pre>
+Syötit: 42</pre>
 
   <p>
     Kuten aiemminkin, esimerkin punaisella värjätty teksti tarkoittaa käyttäjän kirjoittamaa tekstiä.
@@ -1657,8 +1588,7 @@ Syötit: 42
 <pre class="sample-output">Anna ensimmäinen luku: <font color="red">6</font>
 Anna toinen luku: <font color="red">2</font>
 
-Lukujen summa: 8
-</pre>
+Lukujen summa: 8</pre>
 
   <p>
     Kuten aiemminkin, esimerkin punaisella värjätty teksti tarkoittaa käyttäjän kirjoittamaa tekstiä.
@@ -1690,8 +1620,7 @@ Lukujen summa: 8
 Anna toinen luku: <font color="red">2</font>
 Anna kolmas luku: <font color="red">12</font>
 
-Lukujen summa: 19
-</pre>
+Lukujen summa: 19</pre>
 
   <p>
     Kuten aiemminkin, esimerkin punaisella värjätty teksti tarkoittaa käyttäjän kirjoittamaa tekstiä.
@@ -1723,8 +1652,7 @@ Lukujen summa: 19
 <pre class="sample-output">Anna ensimmäinen luku: <font color="red">3</font>
 Anna toinen luku: <font color="red">2</font>
 
-Jakolasku: 3 / 2 = 1.5
-</pre>
+Jakolasku: 3 / 2 = 1.5</pre>
 
 
     </div>
@@ -1751,8 +1679,7 @@ Jakolasku: 3 / 2 = 1.5
 
 <pre class="sample-output">Anna ympyrän säde: <font color="red">20</font>
 
-Ympyrän kehä: 125.66370614359172
-</pre>
+Ympyrän kehä: 125.66370614359172</pre>
 
 
     </div>
@@ -1787,8 +1714,7 @@ Ympyrän kehä: 125.66370614359172
 
 if (luku &gt; 10) {
     System.out.println("Luku oli suurempi kuin 10");
-}
-</code></pre>
+}</code></pre>
 
 <p>
   Jos ehtolauseen lauseke evaluoidaan todeksi, yllä "jos muuttujassa luku oleva arvo on suurempi kuin 10", ohjelman suoritus siirtyy ehtolauseen määrittelemään lohkoon. Jos taas lauseke on epätotta, ohjelman suoritus siirtyy ehtolauseeseen liittyvän lohkon päättävän aaltosulun jälkeiseen lauseeseen.
@@ -1824,14 +1750,12 @@ if (luku &gt; 10) {
 	<td>
 <pre class="sh_java code-highlight"><code>if (luku &gt; 10) {
 luku = 9;
-}
-</code></pre>
+}</code></pre>
 	</td>
 	<td>
 <pre class="sh_java code-highlight"><code>if (luku &gt; 10) {
     luku = 9;
-}
-</code></pre>
+}</code></pre>
 	</td>
       </tr>
     </tbody>
@@ -1860,13 +1784,11 @@ luku = 9;
     Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Ylinopeussakko!" jos luku on suurempi kuin 120.
   </p>
 
-<pre class="sample-output">    Kerro nopeus: <font color="red">15</font>
-</pre>
+<pre class="sample-output">Kerro nopeus: <font color="red">15</font></pre>
 
-<pre class="sample-output">    Kerro nopeus: <font color="red">135</font>
+<pre class="sample-output">Kerro nopeus: <font color="red">135</font>
 
-    Ylinopeussakko!
-</pre>
+Ylinopeussakko!</pre>
 
 
     </div>
@@ -1901,8 +1823,7 @@ if (luku != 0) {
 
 if (luku &gt;= 1000) {
     System.out.println("Luku oli vähintään 1000");
-}
-</code></pre>
+}</code></pre>
 
 
 <div class="exercise">
@@ -1922,13 +1843,11 @@ if (luku &gt;= 1000) {
     Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Orwell" jos luku on täsmälleen 1984.
   </p>
 
-<pre class="sample-output">    Anna luku: <font color="red">1983</font>
-</pre>
+<pre class="sample-output">Anna luku: <font color="red">1983</font></pre>
 
-<pre class="sample-output">    Anna luku: <font color="red">1984</font>
+<pre class="sample-output">Anna luku: <font color="red">1984</font>
 
-    Orwell
-</pre>
+Orwell</pre>
 
 
     </div>
@@ -1953,14 +1872,11 @@ if (luku &gt;= 1000) {
     Tee ohjelma, joka kysyy käyttäjältä vuosilukua. Jos käyttäjä ei syötä lukua 2017, ohjelma tulostaa merkkijonon "Ei ajankohtaista".
   </p>
 
-<pre class="sample-output">Anna vuosiluku: <font color="red">2017</font>
-    
-</pre>
+<pre class="sample-output">Anna vuosiluku: <font color="red">2017</font></pre>
 
 <pre class="sample-output">Anna vuosiluku: <font color="red">2018</font>
 
-Ei ajankohtaista.
-</pre>
+Ei ajankohtaista.</pre>
 
 
     </div>
@@ -1987,11 +1903,9 @@ if (luku &gt; 5) {
     System.out.println("Lukusi on suurempi kuin viisi!");
 } else {
     System.out.println("Lukusi on viisi tai alle!");
-}
-</code></pre>
+}</code></pre>
 
-<pre class="sample-output">  Lukusi on viisi tai alle!
-</pre>
+<pre class="sample-output">Lukusi on viisi tai alle!</pre>
 
 <p>
   Jos ehtolauseeseen on määritelty <code>else</code>-haara, suoritetaan else-haaran määrittelemä lohko jos ehtolauseen ehto ei ole totta. Komento <code>else</code> tulee samalle riville <code>if</code>-komennon määrittelemän lohkon lopettavan aaltosulun kanssa.
@@ -2020,13 +1934,11 @@ if (luku &gt; 5) {
 
 <pre class="sample-output">Anna luku: <font color="red">5</font>
 
-Luku on positiivinen.
-</pre>
+Luku on positiivinen.</pre>
 
 <pre class="sample-output">Anna luku: <font color="red">-2</font>
 
-Luku ei ole positiivinen.
-</pre>
+Luku ei ole positiivinen.</pre>
 
 
     </div>
@@ -2051,13 +1963,11 @@ Luku ei ole positiivinen.
 
 <pre class="sample-output">Kuinka vanha olet? <font color="red">12</font>
 
-Et ole täysi-ikäinen!
-</pre>
+Et ole täysi-ikäinen!</pre>
 
 <pre class="sample-output">Kuinka vanha olet? <font color="red">32</font>
 
-Olet täysi-ikäinen!
-</pre>
+Olet täysi-ikäinen!</pre>
 
 
     </div>
@@ -2083,11 +1993,9 @@ if (luku == 1) {
     System.out.println("Kolme lienee lukuna!");
 } else {
     System.out.println("Jotain muuta!");
-}
-</code></pre>
+}</code></pre>
 
-<pre class="sample-output">  Kolme lienee lukuna!
-</pre>
+<pre class="sample-output">Kolme lienee lukuna!</pre>
 
 
 <p>
@@ -2125,20 +2033,17 @@ if (luku == 1) {
 <pre class="sample-output">Anna ensimmäinen luku: <font color="red">5</font>
 Anna toinen luku: <font color="red">3</font>
 
-Suurempi luku: 5
-</pre>
+Suurempi luku: 5</pre>
 
 <pre class="sample-output">Anna ensimmäinen luku: <font color="red">5</font>
 Anna toinen luku: <font color="red">8</font>
 
-Suurempi luku: 8
-</pre>
+Suurempi luku: 8</pre>
 
 <pre class="sample-output">Anna ensimmäinen luku: <font color="red">5</font>
 Anna toinen luku: <font color="red">5</font>
 
-Luvut ovat yhtä suuret!
-</pre>
+Luvut ovat yhtä suuret!</pre>
 
 
     </div>
@@ -2166,11 +2071,9 @@ if (luku == 0) {
     System.out.println("Luku on suurempi kuin kaksi.");
 } else {
     System.out.println("Luku on pienempi kuin nolla.");
-}
-</code></pre>
+}</code></pre>
 
-<pre class="sample-output">  Luku on suurempi kuin nolla.
-</pre>
+<pre class="sample-output">Luku on suurempi kuin nolla.</pre>
 
 <p>
   Yllä oleva esimerkki tulostaa merkkijonon "Luku on suurempi kuin nolla." vaikka myös ehto <code>luku &gt; 2</code> on totta. Vertailu lopetetaan ensimmäiseen valintakäskyyn, jonka ehto on totta.
@@ -2239,24 +2142,20 @@ if (luku == 0) {
 
 <pre class="sample-output">Anna pisteet [0-100]: <font color="red">37</font>
 
-Arvosana: hylätty
-</pre>
+Arvosana: hylätty</pre>
 
 <pre class="sample-output">Anna pisteet [0-100]: <font color="red">76</font>
 
-Arvosana: 2
-</pre>
+Arvosana: 2</pre>
 
 <pre class="sample-output">Anna pisteet [0-100]: <font color="red">95</font>
 
-Arvosana: 5
-</pre>
+Arvosana: 5</pre>
 
 
-<pre class="sample-output">    Anna pisteet [0-100]: <font color="red">-3</font>
+<pre class="sample-output">Anna pisteet [0-100]: <font color="red">-3</font>
 
-    Arvosana: mahdotonta!
-</pre>
+Arvosana: mahdotonta!</pre>
 
 
     </div>
@@ -2322,11 +2221,9 @@ Arvosana: 5
 </p>
 
 <pre class="sh_java code-highlight"><code>boolean onkoTotta = true;
-System.out.println("Totuusarvomuuttujan arvo on " + onkoTotta);
-</code></pre>
+System.out.println("Totuusarvomuuttujan arvo on " + onkoTotta);</code></pre>
 
-<pre class="sample-output">Totuusarvomuuttujan arvo on true
-</pre>
+<pre class="sample-output">Totuusarvomuuttujan arvo on true</pre>
 
 <p>
   Ehtolauseen voi suorittaa myös seuraavasti:
@@ -2336,11 +2233,9 @@ System.out.println("Totuusarvomuuttujan arvo on " + onkoTotta);
 
 if (onkoTotta) {
     System.out.println("Aika vinhaa!");
-}
-</code></pre>
+}</code></pre>
 
-<pre class="sample-output">Aika vinhaa!
-</pre>
+<pre class="sample-output">Aika vinhaa!</pre>
 
 
 <p>
@@ -2350,8 +2245,7 @@ if (onkoTotta) {
 <pre class="sh_java code-highlight"><code>int eka = 1;
 int toka = 3;
 
-boolean onkoSuurempi = eka &gt; toka;
-</code></pre>
+boolean onkoSuurempi = eka &gt; toka;</code></pre>
 
 <p>
   Yllä olevassa esimerkissä totuusarvomuuttuja <code>onkoSuurempi</code> sisältää nyt totuusarvon <em>false</em>. Yllä olevaa esimerkkiä voi myös jatkaa ja ottaa siihen mukaan ehtolauseen.</p>
@@ -2363,8 +2257,7 @@ boolean onkoPienempi = eka &lt; toka;
 
 if (onkoPienempi) {
     System.out.println("1 on pienempi kuin 3!");
-}
-</code></pre>
+}</code></pre>
 
 <img class="naytto" src="../img/drawings/boolean-muuttuja-9124b5d4.png"/>
 
@@ -2373,8 +2266,7 @@ if (onkoPienempi) {
 </p>
 
 
-<pre class="sample-output">  1 on pienempi kuin 3!
-</pre>
+<pre class="sample-output">1 on pienempi kuin 3!</pre>
 
 
 
@@ -2395,8 +2287,7 @@ System.out.println(jakojaannos); // tulostaa 1
 System.out.println(5 % 3); // tulostaa 2
 System.out.println(7 % 4); // tulostaa 3
 System.out.println(8 % 4); // tulostaa 0
-System.out.println(1 % 2); // tulostaa 1
-</code></pre>
+System.out.println(1 % 2); // tulostaa 1</code></pre>
 
   <p>
     Jos haluamme tietää onko käyttäjän syöttämä luku jaollinen neljälläsadalla, tarkastamme onko syötetyn luvun jakojäännös neljänsadan suhteen nolla.
@@ -2411,8 +2302,7 @@ if (jakojaannos == 0) {
     System.out.println("Luku " + luku + " on jaollinen neljälläsadalla.");
 } else {
     System.out.println("Luku " + luku + " ei ole jaollinen neljälläsadalla.");
-}
-</code></pre>
+}</code></pre>
 
   <p>
     Koska jakojäännös on samanlainen operaatio kuin muutkin laskut, voi sen asettaa osaksi valintakäskyä.
@@ -2426,8 +2316,7 @@ if (luku % 400 == 0) {
     System.out.println("Luku " + luku + " on jaollinen neljälläsadalla.");
 } else {
     System.out.println("Luku " + luku + " ei ole jaollinen neljälläsadalla.");
-}
-</code></pre>
+}</code></pre>
 
 
   </div>
@@ -2452,12 +2341,10 @@ if (luku % 400 == 0) {
   </p>
 
 <pre class="sample-output">Anna luku: <font color="red">2</font>
-Luku 2 on parillinen.
-</pre>
+Luku 2 on parillinen.</pre>
 
 <pre class="sample-output">Anna luku: <font color="red">7</font>
-Luku 7 on pariton.
-</pre>
+Luku 7 on pariton.</pre>
 
   <p>
     Vihje: Luvun jakojäännös 2:lla kertoo, onko luku parillinen vai pariton. Jakojäännos taas saadaan <code>%</code>-operaattorilla, tehtäväpohjassa on lisää ohjeita miten parittomuustarkastus hoituu jakojäännöksen avulla.
@@ -2493,20 +2380,16 @@ Luku 7 on pariton.
   </p>
 
 <pre class="sample-output">Anna vuosi: <font color="red">2011</font>
-Vuosi ei ole karkausvuosi.
-</pre>
+Vuosi ei ole karkausvuosi.</pre>
 
 <pre class="sample-output">Anna vuosi: <font color="red">2012</font>
-Vuosi on karkausvuosi.
-</pre>
+Vuosi on karkausvuosi.</pre>
 
 <pre class="sample-output">Anna vuosi: <font color="red">1800</font>
-Vuosi ei ole karkausvuosi.
-</pre>
+Vuosi ei ole karkausvuosi.</pre>
 
 <pre class="sample-output">Anna vuosi: <font color="red">2000</font>
-Vuosi on karkausvuosi.
-</pre>
+Vuosi on karkausvuosi.</pre>
 
 
   <p>
@@ -2521,8 +2404,7 @@ if (luku % 4 != 0) {
     System.out.println("Vuosi ei ole karkausvuosi.");
 } else if (...) {
     ...
-} ...
-</code></pre>
+} ...</code></pre>
   
   
 
@@ -2555,8 +2437,7 @@ if (luku % 4 != 0) {
 
 <pre class="sh_java code-highlight"><code>while (true) {
     System.out.println("osaan ohjelmoida!");
-}
-</code></pre>
+}</code></pre>
 
 
 <p>
@@ -2593,8 +2474,7 @@ while (true) {
     }
 }
 
-System.out.println("kiitos ja kuulemiin.");
-</code></pre>
+System.out.println("kiitos ja kuulemiin.");</code></pre>
 
 <p>
   </p>
@@ -2610,8 +2490,7 @@ osaan ohjelmoida!
 jatketaanko (ei lopettaa)? <font color="red">2</font>
 osaan ohjelmoida!
 jatketaanko (ei lopettaa)? <font color="red">-1</font>
-kiitos ja kuulemiin.
-</pre>
+kiitos ja kuulemiin.</pre>
 
 
 
