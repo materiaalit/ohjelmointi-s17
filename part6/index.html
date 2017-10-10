@@ -165,7 +165,7 @@ while (true) {
 // selvitetään kolmella jaollisten lukumaara
 long kolmellaJaollistenLukumaara = syotteet.stream()
                                            .mapToInt(s -&gt; Integer.parseInt(s))
-                                           .filter(luku -&gt; luku % 3)
+                                           .filter(luku -&gt; luku % 3 == 0)
                                            .count();
 
 // selvitetään keskiarvo
@@ -186,7 +186,7 @@ System.out.println("Lukujen keskiarvo: " + kolmellaJaollistenLukumaara);
 <pre class="sh_java code-highlight"><code>// selvitetään kolmella jaollisten lukumaara
 long kolmellaJaollistenLukumaara = syotteet.stream()
                                            .mapToInt(s -&gt; Integer.parseInt(s))
-                                           .filter(luku -&gt; luku % 3)
+                                           .filter(luku -&gt; luku % 3 == 0)
                                            .count();
 </code></pre>
 
@@ -504,7 +504,7 @@ luvut.add(6);
 luvut.add(8);
 
 luvut.stream()
-     .filter(luku -&gt; luku % 2)
+     .filter(luku -&gt; luku % 2 == 0)
      .forEach(luku -&gt; System.out.println(luku));
 </code></pre>
 
