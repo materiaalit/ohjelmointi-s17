@@ -33,10 +33,21 @@ class LoginModal {
     initQuiznator();
     initStudentDashboard();
 
+    const researchAgreement = localStorage.getItem('research-agreement') || window['research-agreement'] || ""
+    const agreed = researchAgreement.indexOf('j71pjik42i') !== -1
+    window['research-agreement-agreed'] = agreed
+
+    window.initCodeStatesVisualizer();
+    // window.initTyponator(); // default init disabled -- favoring AB
+    window.initCrowdsorcerer();
+    this.getUserGroup();
+
+    if (!agreed) {
+      return;
+    }
+
     this.initPheromones();
     this.initLogger();
-
-    this.getUserGroup();
   }
 
   getUserGroup() {
@@ -101,6 +112,7 @@ class LoginModal {
       client.unauthenticate();
 
       try {
+        localStorage.removeItem('research-agreement');
         window.StudentDashboard.destroy();
         window.Quiznator.removeUser();
       } catch(e) {}
